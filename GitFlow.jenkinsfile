@@ -39,7 +39,7 @@ stage ("Load Code to Mainframe") {
         connectionId: '38e854b0-f7d3-4a8f-bf31-2d8bfac3dbd4', // CWC2
         credentialsId: "${hostCredentialsId}",
         gitCredentialsId: "${gitCredentialsId}", // Mingh9999
-        gitRepoUrl: "${gitRepoUrl}"
+        gitRepoUrl: "${gitRepoUrl}",
         runtimeConfig: 'ic2ga', // CWC2
         stream: 'GITFLOW'
     }

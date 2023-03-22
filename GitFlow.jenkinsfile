@@ -63,16 +63,16 @@ stage ("Build Mainframe Code") {
 stage ("Execute Unit Tests") {
     node {
         totaltest(
-            serverUrl:                          http://cwcc.bmc.com:2020, 
+            serverUrl:                          "http://cwcc.bmc.com:2020", 
             serverCredentialsId:                hostCredentialsId, 
             credentialsId:                      hostCredentialsId, 
             environmentId:                      5b508b8a787be73b59238d38,
             localConfig:                        false, 
             //localConfigLocation:                tttConfigFolder, 
-            folderPath:                         ./GenApp_MainframeCore/Tests/Unit, 
+            folderPath:                         "./GenApp_MainframeCore/Tests/Unit", 
             recursive:                          true, 
             selectProgramsOption:               true, 
-            jsonFile:                           ./changedPrograms.json,
+            jsonFile:                           "./changedPrograms.json",
             haltPipelineOnFailure:              false,                 
             stopIfTestFailsOrThresholdReached:  false,
             createJUnitReport:                  true, 

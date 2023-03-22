@@ -2,9 +2,9 @@
 ispwApplication:
   host: cwcc.bmc.com
   port: 16196
-  runtimeConfig: iccga
+  runtimeConfig: ic2ga
   stream: GITFLOW
-  application: GITFLOWD
+  application: GFLD
   sandbox: Y
   pathMappings:
   - path: "**/Sources/**"

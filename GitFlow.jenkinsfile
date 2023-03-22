@@ -5,6 +5,8 @@ String cesCredentialsId     = 'PFHMKS0-CES'                    /* Change to Jenk
 String gitRepoUrl           = 'https://github.com/CPWRGIT/GitFlow_PFHMKS0.git'                        /* Change "<repo>" to user specific repository name                     */
 String gitCredentialsId     = 'a7500faf-0dd3-42b5-8b00-0553524a79d2'           /* Change to Jenkins credentials ID for GitHub personal access token    */
 String ccRepo               = 'PFHMKS0.XPCOVER.REPOSIT'                  /* Change to user specific code coverage repository                     */
+String hostConnectionId     = '38e854b0-f7d3-4a8f-bf31-2d8bfac3dbd4'     /* For CWC2 */
+String runtimeConfig        = 'ic2ga'                                   /* For CWC2. Chnage for CWCC */
 
 //This code will be used later to call a shared library script
 // git2Ispw(
@@ -36,23 +38,37 @@ stage ("Load Code to Mainframe") {
         branchMapping: '''*release* => RLSE, per-branch'
         //development* => EMR, per-branch
         feature* => FEAT, per-branch''',
-        connectionId: '38e854b0-f7d3-4a8f-bf31-2d8bfac3dbd4', // CWC2
+        connectionId: "${hostConnectionId}", // CWC2
         credentialsId: "${hostCredentialsId}",
         gitCredentialsId: "${gitCredentialsId}", // Mingh9999
         gitRepoUrl: "${gitRepoUrl}",
-        runtimeConfig: 'ic2ga', // CWC2
+        runtimeConfig: "${runtimeConfig}", // CWC2
         stream: 'GITFLOW'
     }
 }
 
 stage ("Build Mainframe Code") {
     node {
+        try{
+        ispwOperation(
+            connectionId:           "${hostConnectionId}", 
+            credentialsId:          "${cesCredentialsId}",       
+            consoleLogResponseBody: true, 
+            ispwAction:             'BuildTask', 
+            ispwRequestBody:        '''runtimeConfiguration=''' + runtimeConfig + '''
+            buildautomatically = true'''
+        )
+    }
+    catch(Exception e) {
+        
     }
 }
+
 stage ("Execute Unit Tests") {
     node {
     }
 }
+
 stage ("SonarQube Scan") {
     node {
     }

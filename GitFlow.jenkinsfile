@@ -18,6 +18,8 @@ String ccRepo               = 'PFHMKS0.XPCOVER.REPOSIT'                  /* Chan
 
 stage ("Checkout") {
     node {
+        // Get the code from the Git repository
+        checkout scm
     }
 }
 stage ("Initialize") {

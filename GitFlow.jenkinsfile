@@ -16,16 +16,20 @@ String ccRepo               = 'PFHMKS0.XPCOVER.REPOSIT'                  /* Chan
 //     ccRepo:               ccRepo
 // )
 
+stage ("Initialize") {
+    node {
+        // Clean the workspace
+        cleanWs()
+    }
+}
+
 stage ("Checkout") {
     node {
         // Get the code from the Git repository
         checkout scm
     }
 }
-stage ("Initialize") {
-    node {
-    }
-}
+
 stage ("Load Code to Mainframe") {
     node {
     }

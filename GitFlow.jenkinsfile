@@ -82,7 +82,7 @@ stage ("Execute Unit Tests") {
             contextVariables:                   '"ispw_app=GFLD,ispw_level=FEAT"',
             collectCodeCoverage:                true,
             collectCCRepository:                ccRepo,
-            collectCCSystem:                    FEAT,
+            collectCCSystem:                    "FEAT",
             collectCCTestID:                    "${BUILD_DISPLAY_NAME}",
             clearCodeCoverage:                  false,
             logLevel:                           'INFO'

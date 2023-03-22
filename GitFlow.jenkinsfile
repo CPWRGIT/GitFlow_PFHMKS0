@@ -16,6 +16,27 @@ String ccRepo               = 'PFHMKS0.XPCOVER.REPOSIT'                  /* Chan
 //     ccRepo:               ccRepo
 // )
 
-node {
-
+stage ("Checkout") {
+    node {
+    }
+}
+stage ("Initialize") {
+    node {
+    }
+}
+stage ("Load Code to Mainframe") {
+    node {
+    }
+}
+stage ("Build Mainframe Code") {
+    node {
+    }
+}
+stage ("Execute Unit Tests") {
+    node {
+    }
+}
+stage ("SonarQube Scan") {
+    node {
+    }
 }

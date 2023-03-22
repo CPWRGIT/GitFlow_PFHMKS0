@@ -62,6 +62,31 @@ stage ("Build Mainframe Code") {
 
 stage ("Execute Unit Tests") {
     node {
+        totaltest(
+            serverUrl:                          http://cwcc.bmc.com:2020, 
+            serverCredentialsId:                hostCredentialsId, 
+            credentialsId:                      hostCredentialsId, 
+            environmentId:                      5b508b8a787be73b59238d38,
+            localConfig:                        false, 
+            //localConfigLocation:                tttConfigFolder, 
+            folderPath:                         ./GenApp_MainframeCore/Tests/Unit, 
+            recursive:                          true, 
+            selectProgramsOption:               true, 
+            jsonFile:                           ./changedPrograms.json,
+            haltPipelineOnFailure:              false,                 
+            stopIfTestFailsOrThresholdReached:  false,
+            createJUnitReport:                  true, 
+            createReport:                       true, 
+            createResult:                       true, 
+            createSonarReport:                  true,
+            contextVariables:                   '"ispw_app=GFLD,ispw_level=FEAT"',
+            collectCodeCoverage:                true,
+            collectCCRepository:                ccRepo,
+            collectCCSystem:                    FEAT,
+            collectCCTestID:                    "${BUILD_DISPLAY_NAME}",
+            clearCodeCoverage:                  false,
+            logLevel:                           'INFO'
+        )
     }
 }
 

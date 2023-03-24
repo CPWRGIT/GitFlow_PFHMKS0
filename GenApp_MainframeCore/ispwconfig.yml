@@ -1,6 +1,6 @@
 !!com.compuware.ispw.wzzms.models.IspwRoot
 ispwApplication:
-  host: cwcc.bmc.com
+  host: cwc2.bmc.com
   port: 16196
   runtimeConfig: ic2ga
   stream: GITFLOW

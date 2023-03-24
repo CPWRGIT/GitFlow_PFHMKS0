@@ -44,7 +44,7 @@ stage ("Load Code to Mainframe") {
         gitRepoUrl: "${gitRepoUrl}",
         runtimeConfig: "${runtimeConfig}", // CWC2
         stream: 'GITFLOW',
-        ispwConfigPath: ./GenApp_MainFrameCore/ispwconfig.yml
+        ispwConfigPath: "./GenApp_MainFrameCore/ispwconfig.yml"
     }
 }
 

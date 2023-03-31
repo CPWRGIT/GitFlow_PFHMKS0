@@ -7,6 +7,8 @@ String gitCredentialsId     = 'a7500faf-0dd3-42b5-8b00-0553524a79d2'           /
 String ccRepo               = 'PFHMKS0.XPCOVER.REPOSIT'                  /* Change to user specific code coverage repository                     */
 String hostConnectionId     = '38e854b0-f7d3-4a8f-bf31-2d8bfac3dbd4'     /* For CWC2 */
 String runtimeConfig        = 'ic2ga'                                   /* For CWC2. Chnage for CWCC */
+String gitUsername          = 'msingh9999'
+String gitPassword          = 'GoGithub36!'
 
 //This code will be used later to call a shared library script
 // git2Ispw(
@@ -40,7 +42,9 @@ stage ("Load Code to Mainframe") {
         feature* => FEAT, per-branch''',
         connectionId: "${hostConnectionId}", // CWC2
         credentialsId: "${hostCredentialsId}",
-        gitCredentialsId: "${gitCredentialsId}", // Mingh9999
+        //gitCredentialsId: "${gitCredentialsId}", // Mingh9999
+        gitUsername: "{gitUsername}",
+        gitPassword: "{gitPassword}",
         gitRepoUrl: "${gitRepoUrl}",
         runtimeConfig: "${runtimeConfig}", // CWC2
         stream: 'GITFLOW',

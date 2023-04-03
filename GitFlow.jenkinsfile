@@ -1,6 +1,6 @@
 //@Library('GitFlow_Shared_Lib@main') _
 String hostCredentialsId    = 'PFHMKS0'                   /* Change to Jenkins credentials ID for Host userid/password            */
-String cesCredentialsId     = 'fe8bca66-4351-4e3c-8f38-66b477266643'                    /* Change to Jenkins credentials ID for CES token                       */
+String cesCredentialsId     = 'CWEZXXX-CES'                    /* Change to Jenkins credentials ID for CES token                       */
 String gitRepoUrl           = 'https://github.com/CPWRGIT/GitFlow_PFHMKS0.git'                        /* Change "<repo>" to user specific repository name                     */
 //String gitCredentialsId     = 'a7500faf-0dd3-42b5-8b00-0553524a79d2'           /* Change to Jenkins credentials ID for GitHub personal access token    */
 String gitCredentialsId     = 'ec3e192a-3e5f-4c5f-bb40-129b63ce6c23'           /* Change to Jenkins credentials ID for GitHub personal access token    */

@@ -63,32 +63,31 @@ stage ("Build Mainframe Code") {
 
 stage ("Execute Unit Tests") {
     node {
-        totaltest( 
-            serverUrl:                          "http://cwc2.bmc.com:2020", 
-            serverCredentialsId:                hostCredentialsId, 
-            selectEnvironmentRadio:             '-hci',
-            credentialsId:                      hostCredentialsId, 
-            //environmentId:                      '5c519facfba8720a90ccc645',
-            localConfig:                        false, 
-            //localConfigLocation:                tttConfigFolder, 
-            folderPath:                         "./GenApp_MainframeCore/Tests/Unit", 
-            recursive:                          true, 
-            selectProgramsOption:               true, 
-            jsonFile:                           "./changedPrograms.json",
-            haltPipelineOnFailure:              false,                 
-            stopIfTestFailsOrThresholdReached:  false,
-            createJUnitReport:                  true, 
-            createReport:                       true, 
-            createResult:                       true, 
-            createSonarReport:                  true,
-            //contextVariables:                   '"ispw_app=GFLD,ispw_level=FEAT"',
-            collectCodeCoverage:                true,
-            collectCCRepository:                ccRepo,
-            collectCCSystem:                    "FEAT",
-            collectCCTestID:                    "${BUILD_DISPLAY_NAME}",
-            clearCodeCoverage:                  false,
-            logLevel:                           'INFO'
-)
+        totaltest(
+            serverUrl:                          "http://cwc2.bmc.com:2020", 
+            serverCredentialsId:                hostCredentialsId, 
+            credentialsId:                      hostCredentialsId, 
+            environmentId:                      '5c519facfba8720a90ccc645',
+            localConfig:                        false, 
+            //localConfigLocation:                tttConfigFolder, 
+            folderPath:                         "./GenApp_MainframeCore/Tests/Unit", 
+            recursive:                          true, 
+            selectProgramsOption:               true, 
+            jsonFile:                           "./changedPrograms.json",
+            haltPipelineOnFailure:              false,                 
+            stopIfTestFailsOrThresholdReached:  false,
+            createJUnitReport:                  true, 
+            createReport:                       true, 
+            createResult:                       true, 
+            createSonarReport:                  true,
+            contextVariables:                   '"ispw_app=GFLD,ispw_level=FEAT"',
+            collectCodeCoverage:                true,
+            collectCCRepository:                ccRepo,
+            collectCCSystem:                    "FEAT",
+            collectCCTestID:                    "${BUILD_DISPLAY_NAME}",
+            clearCodeCoverage:                  false,
+            logLevel:                           'INFO'
+        )
     }
 }
 

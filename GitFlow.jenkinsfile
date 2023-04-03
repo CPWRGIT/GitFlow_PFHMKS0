@@ -64,7 +64,7 @@ stage ("Build Mainframe Code") {
 stage ("Execute Unit Tests") {
     node {
         totaltest(
-            connectionId:                      "38e854b0-f7d3-4a8f-bf31-2d8bfac3dbd4",
+            connectionId:                       '38e854b0-f7d3-4a8f-bf31-2d8bfac3dbd4',
             serverUrl:                          "http://cwc2.bmc.com:2020", 
             serverCredentialsId:                hostCredentialsId, 
             selectEnvironmentRadio:             '-hci',

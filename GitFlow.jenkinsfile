@@ -65,9 +65,11 @@ stage ("Execute Unit Tests") {
     node {
         totaltest(
             serverUrl:                          "http://cwc2.bmc.com:2020", 
+            connectionId:                       "38e854b0-f7d3-4a8f-bf31-2d8bfac3dbd4",
+            selectEnvironmentRadio:             '-hci',
             serverCredentialsId:                hostCredentialsId, 
             credentialsId:                      hostCredentialsId, 
-            environmentId:                      '5c519facfba8720a90ccc645',
+            //environmentId:                      '5c519facfba8720a90ccc645',
             localConfig:                        false, 
             //localConfigLocation:                tttConfigFolder, 
             folderPath:                         "./GenApp_MainframeCore/Tests/Unit", 
@@ -80,7 +82,7 @@ stage ("Execute Unit Tests") {
             createReport:                       true, 
             createResult:                       true, 
             createSonarReport:                  true,
-            contextVariables:                   '"ispw_app=GFLD,ispw_level=FEAT"',
+            //contextVariables:                   '"ispw_app=GFLD,ispw_level=FEAT"',
             collectCodeCoverage:                true,
             collectCCRepository:                ccRepo,
             collectCCSystem:                    "FEAT",

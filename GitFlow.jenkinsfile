@@ -66,7 +66,7 @@ stage ("Execute Unit Tests") {
         totaltest(
             serverUrl:                          "http://cwc2.bmc.com:2020", 
             connectionId:                       "38e854b0-f7d3-4a8f-bf31-2d8bfac3dbd4",
-            selectEnvironmentRadio:             '-hci',
+            selectEnvironmentRadio:             '-hci'
             serverCredentialsId:                hostCredentialsId, 
             credentialsId:                      hostCredentialsId, 
             //environmentId:                      '5c519facfba8720a90ccc645',

@@ -1,0 +1,35 @@
+CVE1: !!com.ispw.wzzms.datagroups.CVE1
+  gmt1lnam: TPROG01
+  gmt2name: TPROG01
+  gmt3name: TPROG01
+  loadname: TPROG01
+  vps04: 0 PFHMKS0G(J0616940)
+WZGPARMS: !!com.ispw.wzzms.datagroups.extended.XDExt
+  baseclas: CMPNVERS
+  baseid: 1806694
+  extnclas: WZGPARMS
+  extndata: !!binary |-
+    BQADTgYAA04BABwCQzYyAAQAA04dABwGUEZITUtTMAACAANZAwADWQ==
+  extndataMap:
+    WZGPKG: N
+    WZGPLNB: N
+    COMPILER: C62
+    WZGBIND: N
+    USERID: PFHMKS0
+    CPARM1: ''
+    LASTUPDT: '2025-09-30'
+    WZZCOPY: Y
+    WZZLINK: Y
+    LPARM1: ''
+  extndata_l: 40
+  updtdttm: 2025-09-30-10.00.37.319570
+CVA: !!com.ispw.wzzms.datagroups.CVA
+  cicsind: ' '
+  genseq: ' '
+  imsind: ' '
+  opt1ind: ' '
+  opt2ind: ' '
+  opt3ind: ' '
+  opt4ind: ' '
+  progtype: Y
+  sqlind: N

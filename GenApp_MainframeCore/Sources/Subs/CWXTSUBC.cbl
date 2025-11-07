@@ -5,7 +5,7 @@
       ******      C O M P U W A R E   C O R P O R A T I O N       ******
       *                                                                *
       *  THIS CALLED PROGRAM IS THE COBOL DEMO PROGRAM USED FOR        *
-      *  XPEDITER/TSO TRAINING SESSIONS.  MKS-10-16-25 16:22           *
+      *  XPEDITER/TSO TRAINING SESSIONS.  MKS-11-07-25 16:21           *
       *                                                                *
       *  CALCULATES COMMISIONS FOR SALES AND MANAGEMENT EMPLOYEE       *
       *  BASED ON MONTHLY SALES RATES                                  *
